@@ -1,3 +1,20 @@
 .DS_Store
 node_modules
 woff2/
+*.o
+*.obj
+buildfiles/
+**/obj/
+dist/
+**/bazel-*
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+
+# Tests
+*.txt.uncompressed
+*.br
+*.unbr

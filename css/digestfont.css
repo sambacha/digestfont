@@ -1,0 +1,164 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: >0.3%,not dead,not op_mini all,not IE > 0,not samsung 4,not and_uc 12.12
+*/
+
+
+@font-face {
+    font-family: 'scancardiumregular';
+    src: url('scancardium-webfont.woff2') format('woff2'),
+         url('scancardium-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  body {
+    font-family: "Helvetica Neue Thin", Helvetica, Arial, sans-serif;
+    font-size: 1.5em;
+    background: #fff;
+    color: #333;
+    text-align: center;
+  }
+  
+  .header {
+    padding-bottom: .5em;
+  }
+  
+  .header p {
+    padding-top: .5em;
+  }
+  
+  .header a {
+    display: none;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .digestItem:first-child {
+    padding-bottom: 1.5em;
+    margin-top: 1.5em;
+  }
+  
+  .digestItem {
+    padding-top: 1.5em;
+    display: flex;
+    flex-flow: row wrap;
+    outline: none;
+    position: relative;
+    justify-content: center;
+  }
+  
+  .digestItem:empty {
+    display: none;
+  }
+  
+  .digestLogoBox {
+    border: 2px solid #000;
+    border-radius: 18px;
+    padding: .5em;
+    height: 2.5em;
+    width: 2.5em;
+  }
+  
+  .digestLogoBox img {
+    height: 100%;
+    width: 100%;
+  }
+  
+  .digestCode {
+    border: 2px solid #000;
+    font-family: "scancardiumregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin-left: .5em;
+    overflow: hidden;
+    padding: 0.75em 1.5em 0 0.5em;
+    width: 5em;
+    font-size: 1.5em;
+  }
+  
+  .removeItem {
+    color: #666;
+    display: none;
+    align-self: center;
+    order: -1;
+    padding-right: 1em;
+    text-decoration: none;
+  }
+  
+  .digestItem[data-modified="true"] {
+    margin-right: 1.6em;
+  }
+  
+  .digestItem[data-modified="true"] .removeItem {
+    display: inline-flex;
+  }
+  
+  .digestItem[data-modified="false"] .digestCode {
+    background: rgba(0,0,0,0.10)
+  }
+  
+  .codeInput {
+    line-height: 1em;
+    overflow: hidden;
+    outline: none;
+    white-space: nowrap;
+  }
+  
+  .codeInput:after, .itemLabel:after {
+    color: #333;
+    content: attr(data-content);
+    opacity: 0.25;
+  }
+  
+  .itemLabel {
+    overflow: hidden;
+    outline: none;
+    margin-top: 1em;
+    text-align: center;
+    white-space: nowrap;
+    width: 100%;
+  }
+  
+  .itemLabel:after {
+    content: attr(data-content);
+    opacity: 0.25;
+  }
+  
+  @media print {
+    @page {
+      size: 215.9mm 279.4mm; /* letter size */
+      margin: 25mm;
+      margin-right: 45mm; /* compatibility with both A4 and Letter */
+    }
+  
+    section.header::after {
+      content: 'https://sambacha.github.io/digestfont'
+    }
+    
+    section.header h1, section.header p, section.header a {
+      display: none !important;
+    }
+    .itemLabel:empty, .digestItem[data-modified="false"] {
+      display: none;
+    }
+    .itemLabel {
+      text-align: left;
+      text-indent: 1.5em;
+    }
+    .digestItem {
+      justify-content: left;
+      zoom: 50%;
+    }
+    .removeItem {
+      display: none;
+      visibility: hidden;
+    }
+    * {-webkit-print-color-adjust:exact;}
+  }.example {
+      display: grid;
+      transition: all .5s;
+      -webkit-user-select: none;
+              user-select: none;
+      background: linear-gradient(to bottom, white, black);
+  }

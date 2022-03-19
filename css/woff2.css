@@ -1,0 +1,10 @@
+/*
+* Scancardium_2 Font woff2
+*/
+
+
+@font-face {
+    font-family: 'Scancardium';
+    src: url('dist/Scancardium_2.0.woff') format('woff2'), /* Super Modern Browsers */
+        url('dist/Scancardium_2.0.woff2') format('woff'); /* Pretty Modern Browsers */
+}
